@@ -12,6 +12,7 @@ using Microsoft.OpenApi.Models;
 
 
 // Source: https://github.com/domaindrivendev/Swashbuckle.AspNetCore
+// https://code-maze.com/swagger-ui-asp-net-core-web-api/
 
 // The basic setup will run https://localhost:5001/swagger/index.html
 // Swagger json https://localhost:5001/swagger/v1/swagger.json
