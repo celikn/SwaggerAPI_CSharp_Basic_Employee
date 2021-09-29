@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using swaggerCore.Data;
+
 
 namespace swaggerCore.Controller
 {
@@ -9,6 +9,14 @@ namespace swaggerCore.Controller
     [ApiController]
     public class EmployeeController : ControllerBase
     {
+
+        // GET: api/GetCoordinates
+        [HttpGet("Coord")]
+        public IEnumerable<GeographicCoordinates> GetCoord()
+        {
+            return GetCoordinates();
+        }
+
         // GET: api/Employee
         [HttpGet]
         public IEnumerable<Employee> Get()
@@ -60,5 +68,27 @@ namespace swaggerCore.Controller
             }
         };
         }
+
+        private List<GeographicCoordinates> GetCoordinates()
+        {
+            return new List<GeographicCoordinates>()
+        {
+            new GeographicCoordinates()
+            {
+                Lat = 39.9494,
+                Lng = 37.9499494
+               
+            },
+            new GeographicCoordinates()
+            {
+
+                Lat = 40.94940,
+                Lng = 37.848494
+            }
+        };
+        }
+
+
     }
+
 }
